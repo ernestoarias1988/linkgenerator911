@@ -12,8 +12,6 @@ class Footer extends Component {
   }
 
   createElement() {
-    const translate = this.state.translate;
-
     // Add additional links from configuration if available
 
     return html`
@@ -22,9 +20,7 @@ class Footer extends Component {
       >
         <ul
           class="flex flex-col md:flex-row items-start md:items-center md:justify-start"
-        >
-          <li class="m-2">${translate('footerText')}</li>
-        </ul>
+        ></ul>
         <ul
           class="flex flex-col md:flex-row items-start md:items-center md:justify-end"
         ></ul>
