@@ -47,8 +47,8 @@ passwordSetError = Esta contraseña no pudo ser establecida
 -send-short-brand = Send
 -firefox = Firefox
 -mozilla = Mozilla
-introTitle = Intercambio de archivos simple y privado
-introDescription = { -send-brand } te permite compartir archivos con cifrado de extremo a extremo y un enlace que expira automáticamente. Así puedes mantener lo que compartes en privado y asegurarte de que tus cosas no permanezcan en línea para siempre.
+introTitle = Linkgenerator911
+introDescription = Selecciona el archivo que desea compartir
 notifyUploadEncryptDone = Tu archivo está cifrado y listo para enviar
 # downloadCount is from the downloadCount string and timespan is a timespanMinutes string. ex. 'Expires after 2 downloads or 25 minutes'
 archiveExpiryInfo = Expira después de { $downloadCount } o { $timespan }

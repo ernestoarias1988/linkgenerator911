@@ -28,17 +28,7 @@ class Header extends Component {
               </svg>
             </a>
           `
-        : html`
-            <a class="flex flex-row items-center" href="/">
-              <img
-                alt="${this.state.translate('title')}"
-                src="${assets.get('icon.svg')}"
-              />
-              <svg viewBox="66 0 340 64" class="w-48 md:w-64">
-                <use xlink:href="${assets.get('wordmark.svg')}#logo" />
-              </svg>
-            </a>
-          `;
+        : html``;
     return html`
       <header
         class="main-header relative flex-none flex flex-row items-center justify-between w-full px-6 md:px-8 h-16 md:h-24 z-20 bg-transparent"
