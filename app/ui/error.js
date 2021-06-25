@@ -3,6 +3,7 @@ const assets = require('../../common/assets');
 const modal = require('./modal');
 
 module.exports = function(state, emit) {
+  const btnText = state.user.loggedIn ? 'okButton' : 'sendYourFilesLink';
   return html`
     <main class="main">
       ${state.modal && modal(state, emit)}
@@ -21,7 +22,11 @@ module.exports = function(state, emit) {
         >
           ${state.translate('trySendDescription')}
         </p>
-        <p class="my-5"></p>
+        <p class="my-5">
+          <a href="/" class="btn rounded-lg flex items-center" role="button"
+            >${state.translate(btnText)}</a
+          >
+        </p>
       </section>
     </main>
   `;

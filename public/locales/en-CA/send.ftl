@@ -88,8 +88,8 @@ totalSize = Total size: { $size }
 copyLinkDescription = Copy the link to share your file:
 copyLinkButton = Copy link
 downloadTitle = Download files
-downloadDescription = Este archivo se compartió a través del generador de links del SE911.
-trySendDescription = Listo
+downloadDescription = This file was shared via { -send-brand } with end-to-end encryption and a link that automatically expires.
+trySendDescription = Try { -send-brand } for simple, safe file sharing.
 # count will always be > 10
 tooManyFiles =
     { $count ->

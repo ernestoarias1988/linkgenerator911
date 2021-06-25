@@ -23,7 +23,7 @@ export default class Archive {
   }
 
   get name() {
-    return this.files.length > 1 ? 'Comprimido.zip' : this.files[0].name;
+    return this.files.length > 1 ? 'Send-Archive.zip' : this.files[0].name;
   }
 
   get type() {

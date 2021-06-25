@@ -88,8 +88,8 @@ totalSize = Tamaño total: { $size }
 copyLinkDescription = Copiar el enlace para compartir el archivo:
 copyLinkButton = Copiar enlace
 downloadTitle = Descargar archivos
-downloadDescription = Este archivo se compartió a través del generador de Links911 con cifrado de extremo a extremo y un enlace que caduca automáticamente.
-trySendDescription = listo
+downloadDescription = Este archivo se compartió a través de { -send-brand } con cifrado de extremo a extremo y un enlace que caduca automáticamente.
+trySendDescription = Prueba { -send-brand } para compartir archivos de forma sencilla y segura.
 # count will always be > 10
 tooManyFiles =
     { $count ->
