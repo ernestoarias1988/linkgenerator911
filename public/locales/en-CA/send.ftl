@@ -102,7 +102,7 @@ tooManyArchives =
         [one] Only 1 archive is allowed.
        *[other] Only { $count } archives are allowed.
     }
-expiredTitle = This link has expired.
+expiredTitle = Link expirado
 notSupportedDescription = { -send-brand } will not work with this browser. { -send-short-brand } works best with the latest version of { -firefox }, and will work with the current version of most browsers.
 downloadFirefox = Download { -firefox }
 legalTitle = { -send-short-brand } Privacy Notice
