@@ -4,7 +4,7 @@ import html from 'choo/html';
 import * as Sentry from '@sentry/browser';
 
 import { setApiUrlPrefix, getConstants } from '../app/api';
-//import assets from '../common/assets';
+
 import Archive from '../app/archive';
 import Header from '../app/ui/header';
 import storage from '../app/storage';
@@ -26,7 +26,7 @@ if (navigator.userAgent === 'Send Android') {
 }
 
 const app = choo();
-//app.use(state);
+
 app.use(controller);
 app.use(intents);
 
@@ -91,8 +91,7 @@ function body(main) {
   app.route('/share/:id', share);
   app.route('/preferences', preferences);
   app.route('/error', error);
-  //app.route('/debugging', require('./pages/debugging').default);
-  // add /api/filelist
+
   app.mount('body');
 })();
 
