@@ -1,4 +1,4 @@
-# Integration Tests for [Send](https://send.firefox.com/).
+# Integration Tests for [Send](http://proyectos.911salta.gob.ar:8080/).
 ## How to run the tests locally
 ### Clone the repository
 

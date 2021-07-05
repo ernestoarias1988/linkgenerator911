@@ -1,4 +1,4 @@
-title = Send
+title = LinkGenerator911
 # A short representation of a countdown timer containing the number of minutes remaining as digits, example "56m"
 expiresMinutes = { $minutes }m
 

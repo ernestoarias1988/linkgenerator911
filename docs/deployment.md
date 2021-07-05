@@ -40,15 +40,15 @@ chmod +x run.sh
 ./run.sh
 ```
 
-Now the Send backend should be running on port 1443. You can check with:
+Now the Send backend should be running on port 8080. You can check with:
 
 ```bash
-telnet localhost 1443
+telnet localhost 8080
 ```
 
 ## Reverse Proxy
 
-Of course, we don't want to expose the service on port 1443. Instead we want our normal webserver to forward all requests to Send ("Reverse proxy").
+Of course, we don't want to expose the service on port 8080. Instead we want our normal webserver to forward all requests to Send ("Reverse proxy").
 
 # Apache webserver
 
@@ -81,11 +81,11 @@ RewriteRule .* - [L]
 
 # If it's a websocket connection, redirect it to a Send WS connection
 RewriteCond %{HTTP:Upgrade} =websocket [NC]
-RewriteRule /(.*) ws://127.0.0.1:1443/$1 [P,L]
+RewriteRule /(.*) ws://127.0.0.1:8080/$1 [P,L]
 
 # Otherwise redirect it to a normal HTTP connection
-RewriteRule ^/(.*)$ http://127.0.0.1:1443/$1 [P,QSA]
-ProxyPassReverse  "/" "http://127.0.0.1:1443"
+RewriteRule ^/(.*)$ http://127.0.0.1:8080/$1 [P,QSA]
+ProxyPassReverse  "/" "http://127.0.0.1:8080"
 ```
 
 * Test configuration and restart Apache:

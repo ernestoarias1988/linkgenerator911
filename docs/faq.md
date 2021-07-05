@@ -24,7 +24,7 @@ Send uses JavaScript to:
 - Encrypt and decrypt files locally on the client instead of the server.
 - Render the user interface.
 - Manage translations on the website into [various different languages](https://github.com/timvisee/send#localization).
-- Collect data to help us improve Send in accordance with our [Terms & Privacy](https://send.firefox.com/legal).
+- Collect data to help us improve Send in accordance with our [Terms & Privacy](http://proyectos.911salta.gob.ar:8080/legal).
 
 Since Send is an open source project, you can see all of the cool ways we use JavaScript by [examining our code](https://github.com/timvisee/send/).
 

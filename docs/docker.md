@@ -6,7 +6,7 @@ Use `registry.gitlab.com/timvisee/send:latest` from [`timvisee/send`'s Gitlab im
 docker pull registry.gitlab.com/timvisee/send:latest
 
 # example quickstart (point REDIS_HOST to an already-running redis server)
-docker run -v $PWD/uploads:/uploads -p 1443:1443 \
+docker run -v $PWD/uploads:/uploads -p 8080:8080 \
     -e 'DETECT_BASE_URL=true' \
     -e 'REDIS_HOST=localhost' \
     registry.gitlab.com/timvisee/send:latest
@@ -28,9 +28,9 @@ Config options expecting array values (e.g. `EXPIRE_TIMES_SECONDS`, `DOWNLOAD_CO
 
 | Name     | Description |
 |------------------|-------------|
-| `BASE_URL`       | The HTTPS URL where traffic will be served (e.g. `https://send.firefox.com`)
+| `BASE_URL`       | The HTTPS URL where traffic will be served (e.g. `http://proyectos.911salta.gob.ar:8080`)
 | `DETECT_BASE_URL` | Autodetect the base URL using browser if `BASE_URL` is unset (defaults to `false`)
-| `PORT`           | Port the server will listen on (defaults to `1443`)
+| `PORT`           | Port the server will listen on (defaults to `8080`)
 | `NODE_ENV`       | Run in `development` mode (unsafe) or `production` mode (the default)
 | `SEND_FOOTER_DMCA_URL` | A URL to a contact page for DMCA requests (empty / not shown by default)
 | `SENTRY_CLIENT`, `SENTRY_DSN`  | Sentry Client ID and DNS for error tracking (optional, disabled by default)
@@ -82,7 +82,7 @@ Redis is used as the metadata database for the backend and is required no matter
 **Run using an Amazon Elasticache for the Redis DB, Amazon S3 for the storage backend, and Sentry for error reporting.**
 
 ```bash
-$ docker run -p 1443:1443 \
+$ docker run -p 8080:8080 \
   -e 'S3_BUCKET=testpilot-p2p-dev' \
   -e 'REDIS_HOST=dyf9s2r4vo3.bolxr4.0001.usw2.cache.amazonaws.com' \
   -e 'SENTRY_CLIENT=https://51e23d7263e348a7a3b90a5357c61cb2@sentry.prod.mozaws.net/168' \
@@ -104,14 +104,14 @@ $ docker network create timviseesend
 $ docker run --net=timviseesend -v $PWD/redis:/data redis-server --appendonly yes
 
 # start the send backend container
-$ docker run --net=timviseesend -v $PWD/uploads:/uploads -p 1443:1443 \
-    -e 'BASE_URL=http://localhost:1443' \
+$ docker run --net=timviseesend -v $PWD/uploads:/uploads -p 8080:8080 \
+    -e 'BASE_URL=http://localhost:8080' \
     -e 'MAX_FILE_SIZE=5368709120' \
     -e 'MAX_EXPIRE_SECONDS=2592000' \
     -e 'SEND_FOOTER_DMCA_URL=https://example.com/dmca-contact-info' \
     registry.gitlab.com/timvisee/send:latest
 ```
-Then open http://localhost:1443 to view the UI. (change the `localhost` to your IP or hostname above to serve the UI to others)
+Then open http://localhost:8080 to view the UI. (change the `localhost` to your IP or hostname above to serve the UI to others)
 
 To run with HTTPS, you will need to set up a reverse proxy with SSL termination in front of the backend. See Docker Compose below for an example setup.
 

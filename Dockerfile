@@ -50,7 +50,7 @@ RUN npm ci --production && npm cache clean --force
 RUN mkdir -p /app/.config/configstore
 RUN ln -s dist/version.json version.json
 
-ENV PORT=1443
+ENV PORT=8080
 
 EXPOSE ${PORT}
 

@@ -1,13 +1,13 @@
 {
-  "name": "send",
-  "description": "File Sharing Experiment",
+  "name": "Send",
+  "description": "Generador de Links",
   "version": "3.4.12",
   "author": "Mozilla (https://mozilla.org)",
   "contributors": [
-    "Tim Visee <3a4fb3964f@sinenomine.email> (https://timvisee.com)"
+    "Ernesto Arias"
   ],
-  "repository": "gitlab:timvisee/send",
-  "homepage": "https://gitlab.com/timvisee/send/",
+  "repository": "gitlab:",
+  "homepage": "https://gitlab.com/",
   "license": "MPL-2.0",
   "private": true,
   "scripts": {
@@ -31,10 +31,9 @@
     "test-integration": "cross-env NODE_ENV=development wdio test/wdio.docker.conf.js",
     "circleci-test-integration": "echo 'webdriverio tests need to be updated to node 12'",
     "start": "npm run clean && cross-env NODE_ENV=development L10N_DEV=true BASE_URL=http://localhost:8080 DETECT_BASE_URL=true webpack-dev-server --mode=development",
-    "devStart": "nodemon server/bin/prod.js && BASE_URL=http://localhost:1443 DETECT_BASE_URL=true",
+    "devStart": "nodemon server/bin/prod.js && BASE_URL=http://localhost:8080 DETECT_BASE_URL=true",
     "android": "cross-env ANDROID=1 npm start",
-    "prod": "node server/bin/prod.js",
-    "prod2": "npm run cross-env NODE_ENV=development L10N_DEV=true BASE_URL=http://localhost:8080 DETECT_BASE_URL=true webpack-dev-server --mode=development"
+    "prod": "node server/bin/prod.js"
   },
   "husky": {
     "hooks": {
