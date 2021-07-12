@@ -131,7 +131,7 @@ const conf = convict({
   },
   listen_port: {
     format: 'port',
-    default: 1443,
+    default: 8080,
     arg: 'port',
     env: 'PORT'
   },
@@ -162,7 +162,7 @@ const conf = convict({
   },
   base_url: {
     format: 'url',
-    default: 'https://send.firefox.com',
+    default: 'http://proyectos.911salta.gob.ar:8080',
     env: 'BASE_URL'
   },
   detect_base_url: {
