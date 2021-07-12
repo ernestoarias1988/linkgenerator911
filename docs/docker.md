@@ -28,7 +28,7 @@ Config options expecting array values (e.g. `EXPIRE_TIMES_SECONDS`, `DOWNLOAD_CO
 
 | Name     | Description |
 |------------------|-------------|
-| `BASE_URL`       | The HTTPS URL where traffic will be served (e.g. `https//els1.911salta.gob.ar:8080`)
+| `BASE_URL`       | The HTTPS URL where traffic will be served (e.g. `http://els1.911salta.gob.ar:8080`)
 | `DETECT_BASE_URL` | Autodetect the base URL using browser if `BASE_URL` is unset (defaults to `false`)
 | `PORT`           | Port the server will listen on (defaults to `8080`)
 | `NODE_ENV`       | Run in `development` mode (unsafe) or `production` mode (the default)

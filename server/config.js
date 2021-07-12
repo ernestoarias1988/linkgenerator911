@@ -162,7 +162,7 @@ const conf = convict({
   },
   base_url: {
     format: 'url',
-    default: 'https//els1.911salta.gob.ar:8080',
+    default: 'http://els1.911salta.gob.ar:8080',
     env: 'BASE_URL'
   },
   detect_base_url: {

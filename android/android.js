@@ -22,7 +22,7 @@ import { setTranslate } from '../app/utils';
 import { delay } from '../app/utils';
 
 if (navigator.userAgent === 'Send Android') {
-  setApiUrlPrefix('https//els1.911salta.gob.ar:8080');
+  setApiUrlPrefix('http://els1.911salta.gob.ar:8080');
 }
 
 const app = choo();

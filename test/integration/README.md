@@ -1,4 +1,4 @@
-# Integration Tests for [Send](https//els1.911salta.gob.ar:8080/).
+# Integration Tests for [Send](http://els1.911salta.gob.ar:8080/).
 ## How to run the tests locally
 ### Clone the repository
 
