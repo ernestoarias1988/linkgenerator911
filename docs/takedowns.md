@@ -4,7 +4,7 @@ In cases of a DMCA notice, or other abuse yet to be determined, a file has to be
 
 Files can be delisted and made inaccessible by removing their record from Redis.
 
-Send share links contain the `id` of the file, for example `http://proyectos.911salta.gob.ar:8080/download/3d9d2bb9a1`
+Send share links contain the `id` of the file, for example `https//els1.911salta.gob.ar:8080/download/3d9d2bb9a1`
 
 From a host with access to the Redis server run a `DEL` command with the file id.
 

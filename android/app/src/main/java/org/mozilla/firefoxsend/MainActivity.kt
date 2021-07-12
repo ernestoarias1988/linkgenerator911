@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity(), AdvancedWebView.Listener {
 
     fun beginOAuthFlow() {
         Config.release().then { value ->
-            mAccount = FirefoxAccount(value, "20f7931c9054d833", "http://proyectos.911salta.gob.ar:8080/fxa/android-redirect.html")
+            mAccount = FirefoxAccount(value, "20f7931c9054d833", "https//els1.911salta.gob.ar:8080/fxa/android-redirect.html")
             mAccount?.beginOAuthFlow(arrayOf("profile", "https://identity.mozilla.com/apps/send"), true)
                     ?.then { url ->
                         // Log.d(TAG_CONFIG, "GOT A URL $url")
@@ -140,7 +140,7 @@ class MainActivity : AppCompatActivity(), AdvancedWebView.Listener {
     }
 
     override fun onPageStarted(url: String, favicon: Bitmap?) {
-        if (url.startsWith("http://proyectos.911salta.gob.ar:8080/fxa/android-redirect.html")) {
+        if (url.startsWith("https//els1.911salta.gob.ar:8080/fxa/android-redirect.html")) {
             // We load this here so the user doesn't see the android-redirect.html page
             webView.loadUrl("file:///android_asset/android.html")
 
