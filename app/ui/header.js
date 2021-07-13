@@ -45,6 +45,15 @@ class Header extends Component {
               <center><p></p></center>
             </td>
             <td>
+              <center><p></p></center>
+            </td>
+            <td>
+              <center><p></p></center>
+            </td>
+            <td>
+              <center><p></p></center>
+            </td>
+            <td>
               <center>
                 <img
                   src="http://www.911salta.gob.ar/wp-content/uploads/2021/05/logo-911-salta-argentina-1.png"
