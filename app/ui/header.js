@@ -18,23 +18,42 @@ class Header extends Component {
   }
 
   createElement() {
-    const title =
-      platform() === 'android'
-        ? html`
-            <a class="flex flex-row items-center">
-              <img src="${assets.get('icon.svg')}" />
-              <svg class="w-48">
-                <use xlink:href="${assets.get('wordmark.svg')}#logo" />
-              </svg>
-            </a>
-          `
-        : html``;
+    platform() === 'android'
+      ? html`
+          <a class="flex flex-row items-center">
+            <img src="${assets.get('icon.svg')}" />
+            <svg class="w-48">
+              <use xlink:href="${assets.get('wordmark.svg')}#logo" />
+            </svg>
+          </a>
+        `
+      : html``;
     return html`
-      <header
-        class="main-header relative flex-none flex flex-row items-center justify-between w-full px-6 md:px-8 h-16 md:h-24 z-20 bg-transparent"
-      >
-        <h1>Hola</h1>
-        ${title} ${this.account.render()}
+      <header>
+        <br /><br /><br />
+        <table border="0" width="95%" height="auto">
+          <tr>
+            <td>
+              <center>
+                <img
+                  src="https://www.salta.gob.ar/public/images/logo-gobierno-salta-2020.png"
+                  border="0"
+                />
+              </center>
+            </td>
+            <td>
+              <center><p></p></center>
+            </td>
+            <td>
+              <center>
+                <img
+                  src="http://www.911salta.gob.ar/wp-content/uploads/2021/05/logo-911-salta-argentina-1.png"
+                  border="0"
+                />
+              </center>
+            </td>
+          </tr>
+        </table>
       </header>
     `;
   }
