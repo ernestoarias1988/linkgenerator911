@@ -2,11 +2,11 @@
 const html = require('choo/html');
 const archiveTile = require('./archiveTile');
 const modal = require('./modal');
-const noStreams = require('./noStreams');
+// const noStreams = require('./noStreams');
 const notFound = require('./notFound');
 const downloadPassword = require('./downloadPassword');
 const downloadCompleted = require('./downloadCompleted');
-const BIG_SIZE = 1024 * 1024 * 256;
+// const BIG_SIZE = 1024 * 1024 * 256;
 
 function createFileInfo(state) {
   return {
@@ -31,9 +31,9 @@ function downloading(state, emit) {
 }
 
 function preview(state, emit) {
-  if (!state.capabilities.streamDownload && state.fileInfo.size > BIG_SIZE) {
-    return noStreams(state, emit);
-  }
+  // if (!state.capabilities.streamDownload && state.fileInfo.size > BIG_SIZE) {
+  //   return noStreams(state, emit);
+  // }
   return html`
     <div
       class="flex flex-col w-full max-w-md h-full mx-auto items-center justify-center"
